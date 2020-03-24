@@ -2,6 +2,10 @@
 import string
 from nltk.tokenize import RegexpTokenizer
 
+nCorpi = 1;
+minPalindromeWordLength = 2;
+maxPalindromeWordLength = 7;
+
 
 def palindrome(s):
 	if (len(s)<=1):
@@ -48,14 +52,11 @@ def findPalindromes(corpus, minPalindromeWordLength, maxPalindromeWordLength, pa
 						palindromeDict[concatWithSpaces] = 1;
 
 palindromeDict = dict()
-for corpusNumber in range(1,2):
+for corpusNumber in range(1, nCorpi+1):
 
 	corpusName = "corpus" + str(corpusNumber) + ".txt"
 	f = open(corpusName,"r") 
 	corpus =  f.read()
 	corpus = cleanCorpus(corpus)
-	findPalindromes(corpus, 2, 7, palindromeDict);
-for i in palindromeDict:
-	print i
-
+	findPalindromes(corpus, minPalindromeWordLength, maxPalindromeWordLength, palindromeDict);
 print palindromeDict
