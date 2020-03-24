@@ -5,7 +5,7 @@ A system that finds and stores multi-word palindromes
 
  Use any number of corpi and name them "corpus1.txt, corpus2.txt, ..."
  
- Change the following settings in "palindromeSearch.py": 
+ Change the following settings in "palindromeSearchPrototype.py": 
   > **nCorpi** -> number of corpi to be processed
    
   > **minPalindromeWordLength** -> the number of required words in the output palindrome
